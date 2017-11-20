@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onload= "draw()">
+<canvas id = "sketch" width ="300" height = "300">
+<script type="text/javascript">
+	var radius = prompt("Enter a radius");
+	var color = prompt("Enter a color");
+	var radius_1 = parseint(radius, 10);
+
+	function draw() {
+	// your drawing goes here
+	var sketch = document.getElementById('sketch');
+	var context = sketch.getContext("2d");
+	context.fillStyle = "#000000 "
+	
+	
+	if (color == "red"){
+		context.fillStyle = "#ff0000"
+	}
+	else if (color == "blue"){
+		context.fillStyle = "#0000ff"
+	}
+	else if (color == "green"){
+		context.fillStyle = "#80ff00"
+	}
+	else  {
+		console.log("NO NO NO, not today!!!")
+	}
+	context.beginPath();
+	context.arc(230, 100, 52, 52,  2 * Math.PI, true);
+	context.closePath();
+	context.fill();
+	}	
+</script>	
+</canvas>
+</body>
+</html>
